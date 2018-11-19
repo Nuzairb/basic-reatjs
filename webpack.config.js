@@ -11,9 +11,9 @@ var config = {
     publicPath: "/app/"
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js?/,
+        test: /\.js$/,
         include: SRC_DIR,
         loader: "babel-loader",
         qurey: {
