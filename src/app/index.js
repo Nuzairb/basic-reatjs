@@ -1,10 +1,9 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-
-import { header } from "./components/Header";
+import React from "react";
+import ReactDOM from "react-dom";
+import { Header } from "./components/Header";
 import { Home } from "./components/Home";
 
-require('./index.css');
+require("./index.css");
 
 
 // State
@@ -33,5 +32,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById('app')
-)
+  document.getElementById("app")
+);
