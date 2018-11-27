@@ -1,19 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export class Home extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>In a new component!</p>
-        <p>Your name is {this.props.name}, your age is {this.props.age}</p>
-        <div>
-      </div>
-    );
-  }
+    render() {
+        const age = this.props.age + 1;
+        return (
+            <div>
+                <h3>Hello {this.props.name}!</h3>
+                <p>You're almost {age}</p>
+            </div>
+        );
+    }
 }
-
-Home.propTypes = {
-  name: PropTypes.string,
-  age: PropTypes.number
-};
