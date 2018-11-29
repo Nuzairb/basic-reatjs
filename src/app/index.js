@@ -35,7 +35,7 @@ class App extends React.Component {
         if (this.state.homeMounted) {
             homeCmp = (
                 <Home
-                    name={"Max"}
+                    name={"Nuzair"}
                     initialAge={27}
                     greet={this.onGreet}
                     changeLink={this.onChangeLinkName.bind(this)}
