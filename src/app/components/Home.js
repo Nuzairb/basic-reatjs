@@ -31,6 +31,9 @@ export class Home extends React.Component {
     
     shouldComponentUpdate(nextProps, nextState) {
         console.log("Should componnet update", nextProps, nextState);
+        if (nextState.status === 1) {
+            return false;
+        }
         return true;
     }
 
