@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Header} from "./Header";
+import { Header } from "./Header";
 
 export class Root extends React.Component {
     render() {
@@ -8,9 +8,10 @@ export class Root extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Header/>
+                        <Header />
                     </div>
                 </div>
+                <hr />
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
                         {this.props.children}
