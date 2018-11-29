@@ -20,27 +20,26 @@ export class Home extends React.Component {
         console.log("Component will mount");
     }
 
-    
     componentDidMount() {
-        console.log("Component did mount");
+        console.log("Component did mount!");
     }
 
     componentWillReceiveProps(nextProps) {
         console.log("Component will receive props", nextProps);
     }
-    
+
     shouldComponentUpdate(nextProps, nextState) {
-        console.log("Should componnet update", nextProps, nextState);
-        if (nextState.status === 1) {
-            return false;
-        }
+        console.log("Should Component update", nextProps, nextState);
+        // if (nextState.status === 1) {
+        //     return false;
+        // }
         return true;
     }
 
     componentWillUpdate(nextProps, nextState) {
         console.log("Component will update", nextProps, nextState);
     }
-    
+
     componentDidUpdate(prevProps, prevState) {
         console.log("Component did update", prevProps, prevState);
     }
@@ -48,7 +47,7 @@ export class Home extends React.Component {
     componentWillUnmount() {
         console.log("Component will unmount");
     }
-    
+
     onMakeOlder() {
         this.setState({
             age: this.state.age + 3
@@ -71,13 +70,13 @@ export class Home extends React.Component {
                 <p>In a new Component!</p>
                 <p>Your name is {this.props.name}, your age is {this.state.age}</p>
                 <p>Status: {this.state.status}</p>
-                <hr/>
+                <hr />
                 <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
-                <hr/>
+                <hr />
                 <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
-                <hr/>
-                <input  type="text" value={this.state.homeLink} 
-                        onChange={(event) => this.onHandleChange(event)} />
+                <hr />
+                <input type="text" value={this.state.homeLink}
+                    onChange={(event) => this.onHandleChange(event)} />
                 <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header Link</button>
             </div>
         );
